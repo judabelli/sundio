@@ -10,10 +10,11 @@
 	overflow:hidden;
 	 @media screen and (min-width: $break-medium) {
 	 	min-height: 350px;
-	 	background-image:url(../img/slider.jpg);
+	 	background-image:url(../img/carrousel-medium.jpg);
 	 	overflow: inherit;
 	 }
 	  @media screen and (min-width: $break-medium) {
+	 	background-image:url(../img/carrousel-xl.jpg);
 	  	min-height: 450px;
 	  }
 }
@@ -39,6 +40,8 @@
     	line-height: 90px;
     	text-align: left;
     	bottom:auto;
+    	display: block;
+    
     }
     @media screen and (min-width: $break-large) {
     	display: inherit;
@@ -55,6 +58,7 @@
 	    bottom: auto;
 	    margin-left: 70px;
 	    top: 40px;
+	    max-width:80%;
 	}
 	@media screen and (min-width: $break-large) {
 		width: 40%;

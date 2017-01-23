@@ -90,8 +90,6 @@ h3 {
     align-self: center;
     @media screen and (min-width: $break-medium) {
 	 	left: 44px;
+	 	bottom: -50px;
 	}
-	@media screen and (min-width: $break-large) {
-    	bottom: -50px;
-    }	
 }

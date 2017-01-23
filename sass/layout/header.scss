@@ -1,17 +1,23 @@
 .header-container {
-	background-image:url(../img/header-lines.png);
-	background-position:bottom;
-	background-repeat:no-repeat;
+	// background-image:url(../img/header-lines.png);
+	 @include linear-gradient(url(../img/backgrounds/header-lines.png), 0deg, $primary-blue 0, $primary-blue 5px, rgba(255,255,255,0) 0, rgba(255,255,255,0) 9px, $primary-orange 0, $primary-orange 14px, rgba(255,255,255,0) 0, rgba(255,255,255,0) 21px, $primary-color 0, $primary-color 26px, rgba(255,255,255,0) 0);
+	// background-position:bottom;
+	// background-repeat:no-repeat;
+
 	min-height:82px;
 	position:relative;
 	z-index:99;
+	@media screen and (min-width: $break-medium) {
+		@include linear-gradient(url(../img/backgrounds/header-lines.png), 0deg, $primary-blue 0, $primary-blue 3px, rgba(255,255,255,0) 0, rgba(255,255,255,0) 5px, $primary-orange 0, $primary-orange 8px, rgba(255,255,255,0) 0, rgba(255,255,255,0) 12px, $primary-color 0, $primary-color 15px, rgba(255,255,255,0) 0);
+	}
 	@media screen and (min-width: $break-large) {
 	 display: flex;
-	 }
+	}
 }
 .header-container--icons {
 	display:inline-block;
 	float:right;
+	padding-right:20px;
 }
 .header-container--extras{
 	width: calc(100% - 300px);

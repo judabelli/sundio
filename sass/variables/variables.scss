@@ -1,10 +1,16 @@
 
 
-$font-color: #333333; /* Gris base*/
-$link-color: #51aee3; /* Blau link */
-$primary-color: #ed1c2e; /* Vermell*/
-$secundary-color: #fbeb2e;/*Groc*/
+
+$primary-color: #ed1c2e; // Vermell
+$secundary-color: #fbeb2e;// Groc
+$primary-yellow: #fbeb2e;
+$primary-blue:  #20a0de;
+$primary-orange:  #f99500;
+
+$font-color: #333333; // Gris base
+$link-color: #51aee3; // Blau link 
 $titles-color:#2d2d2d;
+
 
 $body-background: #eeeeee;
 $base-background: #ffffff;
@@ -13,8 +19,8 @@ $base-background: #ffffff;
 $break-medium: 480px;
 $break-large: 960px;
 
-$font-stack: Verdana, Geneva, sans-serif;
 
+$path-fonts: "../fonts/";
 
 
 $font-size: 12px;

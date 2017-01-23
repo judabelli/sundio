@@ -4,6 +4,7 @@
 
 // Mixins
 @import "mixins/columns";
+@import "mixins/gradient";
 
 // Base 
 @import "base/reset";
@@ -18,9 +19,10 @@
 
 // Layout 
 @import "layout/header";
+@import "layout/carrousel";
 @import "layout/footer";
 
-// Trumps
+// Trumps 
 @import "trumps/trumps";
 
 

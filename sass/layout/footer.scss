@@ -8,17 +8,20 @@
 	 	content:'';
 	 	clear: both;
 	 }
-    .is-logo { 	
+    .logotipe--container { 	
     	min-height: 0;
     }
-    .is-logo img {
+    .logotipe--container img {
     	bottom:auto;
-    	top: -110px;
+    	top: -90px;
     	left: 0px;
         max-width: 170px;
     	@media screen and (min-width: $break-medium) {
-	    	top: -135px;
-	    	left: -40px;
+	    	top: -105px;
+	    	left: -20px;
+    	}
+    	@media screen and (min-width: $break-large) {
+    		top:-145px;
     	}
     }
     .is-headline {
@@ -28,9 +31,12 @@
 	    margin: 0 auto;
 	    @media screen and (min-width: $break-medium) {
 	    	position: absolute;
-		    top: -125px;
+		    top: -105px;
 		    left: 200px;
 	    }
+    	@media screen and (min-width: $break-large) {
+    		top:-145px;
+    	}
     }
 }
 
@@ -52,7 +58,7 @@
 }
 .footer-content--container {
 	max-width: 860px;
-	margin: 20px auto;
+	margin: 0 auto;
 	padding: 0 30px;
 	position:relative;
 }
@@ -81,7 +87,11 @@
 	margin-top:30px;
 	@media screen and (min-width: $break-large) {
 	 @include col(1, 3);
+	 &:last-of-type {
+	 	 @include col(2, 3);
+	 }
 	}
+
 
 }
 
@@ -91,13 +101,13 @@
 .footer-content:before {
     background-image: url(../img/summer-wave.svg);
     width: 100%;
-    background-size: 150%;
+    background-size: cover;
     background-position-x: 55%;    
     background-repeat-y: no-repeat;
     content: '';
     display: block;
     position: absolute;
-    height: 100%;
+    height: 20%;
     top: -20px; 
  	
  	@media screen and (min-width: $break-medium) {
@@ -105,8 +115,8 @@
 	    top: -55px;
 	}
 	@media screen and (min-width: $break-large) {
-		height: 40%;
-		top: -100px;
+		height: 25%;
+		top: -25%;
 	}
 }
 
