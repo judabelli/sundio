@@ -1,0 +1,21 @@
+.header-container {
+	background-image:url(../img/header-lines.png);
+	background-position:bottom;
+	background-repeat:no-repeat;
+	min-height:82px;
+	position:relative;
+	z-index:99;
+	@media screen and (min-width: $break-large) {
+	 display: flex;
+	 }
+}
+.header-container--icons {
+	display:inline-block;
+	float:right;
+}
+.header-container--extras{
+	width: calc(100% - 300px);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,30 @@
+.is-desktop {
+	display:none;
+	@media screen and (min-width: $break-large) {
+	 display: block;
+	 }
+}
+.has-clearfix-on-medium {
+	@media screen and (min-width: $break-medium) and (max-width: $break-large) {
+		clear: both;	
+	}
+}
+.is-tablet {
+	display:none;
+	@media screen and (min-width: $break-medium) {
+	 display: block
+	}
+}
+.is-padded {
+	padding:35px 20px;
+	@media screen and (min-width: $break-medium) {
+		padding:75px 20px;
+	}
+}
+
+.is-headline {
+	color:$primary-color;
+	font-size:2rem;
+	@extend .font-fords-folly;
+}
+
