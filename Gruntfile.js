@@ -13,6 +13,20 @@ module.exports = function(grunt){
                 }
             }
         },
+        postcss: {
+            options: {
+                map: true, // inline sourcemaps
+
+                processors: [
+                    require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+                    require('cssnano')(), // minify the result
+                    require("css-mqpacker")()
+                ]
+                },
+                dist: {
+                src: 'site/css/**/*.css'
+            }
+        },
         watch: {
           scripts: {
             files: ['sass/**/*.scss'],
@@ -24,5 +38,5 @@ module.exports = function(grunt){
         }
     });
      
-    grunt.registerTask('default', ['sass']);
+    grunt.registerTask('default', ['sass', 'postcss']);
 };

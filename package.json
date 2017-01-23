@@ -10,8 +10,12 @@
   "author": "Judit Abellí Salvador",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^6.7.0",
+    "css-mqpacker": "^5.0.1",
+    "cssnano": "^3.10.0",
     "grunt": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.8.0",
     "grunt-sass": "^2.0.0",
     "load-grunt-tasks": "^3.5.2"
   }

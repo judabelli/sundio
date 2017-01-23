@@ -1,0 +1,313 @@
+@import "fords-folly";
+@import "pacifico";
+@import "sansa-pro";
+@import "reset";
+
+$font-stack: Verdana, Geneva, sans-serif;
+
+$font-size: 12px;
+
+$font-color: #333333; /* Gris base*/
+$link-color: #51aee3; /* Blau link */
+$primary-color: #ed1c2e; /* Vermell*/
+$secundary-color: #fbeb2e;/*Groc*/
+$titles-color:#2d2d2d;
+$body-background: #eeeeee; /* Gris clar*/
+$base-background: #ffffff; /* Blanc*/
+
+
+$break-medium: 480px;
+$break-large: 960px;
+
+@mixin col($col, $sum, $gap: 1em, $align: top) {
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  float: left;
+
+  @media only screen and (min-width: $break-medium) {
+    width: percentage($col/$sum);
+    vertical-align: $align; 
+  }
+
+}
+
+html, 
+body {
+	font-size: $font-size;
+}
+
+body {
+  font: 100% $font-stack;
+  background-color:$body-background;
+  color: $font-color;
+  text-align: center;
+  line-height:2rem;
+}
+
+a {
+	color:$link-color;
+	text-decoration:underline;
+}
+button {
+	background-color:$primary-color;
+	color:$base-background;
+	font-size: 13px; /* Canviar a rem*/
+	box-shadow: none;
+	border: 0;
+	border-radius: 7px;
+	padding: 10px 25px;
+	text-transform: uppercase;
+
+	@extend .font-sansa-pro;
+}
+p + button {
+	margin-top:40px;
+	margin-bottom:15px;
+}
+h1 { 
+	color:$titles-color;
+	font-size: 22px; /* Canviar a rem*/
+	@extend .font-pacifico;
+}
+h2,h3 {
+	@extend .font-sansa-pro;
+}
+h2 {
+	font-size: 26px; /* Canviar a rem*/	
+	padding-bottom:40px;
+}
+h3 {
+	color: $primary-color;
+	font-size: 18px; /* Canviar a rem*/	
+	padding-bottom:40px;
+}
+.header-container {
+	background-image:url(../img/header-lines.png);
+	background-position:bottom;
+	background-repeat:no-repeat;
+	min-height:82px;
+	position:relative;
+	z-index:99;
+	@media screen and (min-width: $break-large) {
+	 display: flex;
+	 }
+}
+.header-container--icons {
+	display:inline-block;
+	float:right;
+}
+.is-desktop {
+	display:none;
+	@media screen and (min-width: $break-large) {
+	 display: block;
+	 }
+}
+.is-tablet {
+	display:none;
+	@media screen and (min-width: $break-medium) {
+	 display: block
+	}
+}
+.is-padded {
+	padding:35px 20px;
+	@media screen and (min-width: $break-medium) {
+		padding:75px 20px;
+	}
+}
+.container {
+	max-width:1400px;
+	margin: 0 auto;
+	background-color:$base-background;
+	box-shadow:inset rgba(0,0,0,.3) 0 0 10px;
+}
+.is-headline {
+	color:$primary-color;
+	font-size:2rem;
+	@extend .font-fords-folly;
+}
+.is-logo {
+	position: relative;
+    height: 100%;
+    width: 100%;
+    min-height: 95px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+ 	@media screen and (min-width: $break-medium) {
+	 	min-height: 55px;
+	 	max-width: 300px;
+	}
+	a {
+		width: 100%;
+	    height: auto;
+	    display: flex;
+	    align-items: center;
+	    align-content: center;
+	    justify-content: center;
+	}
+}
+.is-logo img {
+	position: absolute;
+    width: 80%;
+    max-width: 240px;
+    bottom: -30px;
+    align-self: center;
+    @media screen and (min-width: $break-medium) {
+	 	left: 44px;
+	}
+}
+
+.carrousel {
+	position:relative;
+	width:100%;
+	min-height:230px;
+	background-image:url(../img/carrousel.png);
+	background-size:cover;
+	background-position: right;
+	background-repeat:no-repeat;
+	z-index:0;
+	overflow:hidden;
+	 @media screen and (min-width: $break-medium) {
+	 	min-height: 350px;
+	 	overflow: inherit;
+	 }
+}
+.carrousel-text {
+    background-image: url(../img/summer-wave.svg);
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    height: 100%;
+    margin-top: 25px;
+    background-position-y: bottom;
+    content: '';
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 100% 40%;
+    text-indent: -15px;
+    display: flex;
+    justify-content: center;
+    @media screen and (min-width: $break-medium) {
+   		background-size: 100% 20%;
+    	bottom: -10px;
+    	font-size: 70px;
+    	line-height: 90px;
+    	text-align: left;
+    	bottom:auto;
+    }
+    @media screen and (min-width: $break-large) {
+    	display: inherit;
+     }
+}
+.carrousel-text--title {
+	position:absolute;
+	bottom:35px;
+	text-shadow: 5px 1px 13px rgba(255, 255, 255, 1);
+	@media screen and (min-width: $break-medium) {
+		font-size: 70px;
+	    line-height: 90px;
+	    text-align: left;
+	    bottom: auto;
+	    margin-left: 70px;
+	    top: 40px;
+	}
+	@media screen and (min-width: $break-large) {
+		width: 40%;
+	}
+}
+.footer-content {
+    background-color: #f9eb2d;
+    margin-top: 195px;
+    position: relative;
+    padding: 30px 0;
+    &:after {
+	 	display: block;
+	 	content:'';
+	 	clear: both;
+	 }
+    .is-logo { 	
+    	min-height: 0;
+    }
+    .is-logo img {
+    	bottom:auto;
+    	top: -135px;
+    	left: 40px;
+    	max-width: 170px;
+    	 @media screen and (min-width: $break-medium) {
+	    	left: 50px;
+	    }
+    }
+    .is-headline {
+    	font-size: 1.5rem;
+	    font-weight: bold;
+	    position:relative;
+	    max-width: 80%;
+	    text-align: center;
+	    margin: 0 auto;
+	    @media screen and (min-width: $break-medium) {
+	    	position: absolute;
+		    top: -100px;
+		    left: 30s0px;
+	    }
+    }
+}
+
+.header-container--extras{
+	width: calc(100% - 300px);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-content a {  
+	font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: #333;
+}
+.footer-content h5 {
+	font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    color: #333;
+}
+
+.footer-content--links {
+	@include col(1, 4);
+}
+
+.footer-content--country-links {
+	@include col(3, 4);
+}
+.footer-content--country-links-column {
+	@include col(1, 3);
+	text-align:left;
+}
+
+.footer-content--text {
+	display:none;
+}
+.footer-content:before {
+    background-image: url(../img/summer-wave.svg);
+    width: 100%;
+    background-size: 150%;
+    background-position-x: 55%;    
+    background-repeat-y: no-repeat;
+    content: '';
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: -20px; 
+ 	
+ 	@media screen and (min-width: $break-medium) {
+	    height: 20%;
+	    top: -55px;
+	}
+	@media screen and (min-width: $break-large) {
+		height: 40%;
+		top: -100px;
+	}
+}
+
