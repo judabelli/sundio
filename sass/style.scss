@@ -119,7 +119,7 @@ h3 {
 	max-width:1400px;
 	margin: 0 auto;
 	background-color:$base-background;
-	box-shadow:inset rgba(0,0,0,.3) 0 0 10px;
+	box-shadow:0 0 6px 0 rgba(0,0,0,.15);
 }
 .is-headline {
 	color:$primary-color;
@@ -157,6 +157,9 @@ h3 {
     @media screen and (min-width: $break-medium) {
 	 	left: 44px;
 	}
+	@media screen and (min-width: $break-large) {
+    	bottom: -50px;
+    }	
 }
 
 .carrousel {
@@ -171,8 +174,12 @@ h3 {
 	overflow:hidden;
 	 @media screen and (min-width: $break-medium) {
 	 	min-height: 350px;
+	 	background-image:url(../img/slider.jpg);
 	 	overflow: inherit;
 	 }
+	  @media screen and (min-width: $break-medium) {
+	  	min-height: 450px;
+	  }
 }
 .carrousel-text {
     background-image: url(../img/summer-wave.svg);
@@ -238,6 +245,7 @@ h3 {
     	 @media screen and (min-width: $break-medium) {
 	    	left: 50px;
 	    }
+
     }
     .is-headline {
     	font-size: 1.5rem;
@@ -249,7 +257,7 @@ h3 {
 	    @media screen and (min-width: $break-medium) {
 	    	position: absolute;
 		    top: -100px;
-		    left: 30s0px;
+		    left: 300px;
 	    }
     }
 }
